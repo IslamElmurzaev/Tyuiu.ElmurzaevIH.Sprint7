@@ -33,10 +33,10 @@
             this.buttonOpenFile_EIH = new System.Windows.Forms.Button();
             this.buttonInfo_EIH = new System.Windows.Forms.Button();
             this.toolTip_EIH = new System.Windows.Forms.ToolTip(this.components);
-            this.openFileDialog_EIH = new System.Windows.Forms.OpenFileDialog();
-            this.groupBoxOutPutData_EIH = new System.Windows.Forms.GroupBox();
             this.buttonSaveFile_EIH = new System.Windows.Forms.Button();
             this.buttonAddVideo_EIH = new System.Windows.Forms.Button();
+            this.openFileDialog_EIH = new System.Windows.Forms.OpenFileDialog();
+            this.groupBoxOutPutData_EIH = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxVideoCounter_EIH = new System.Windows.Forms.TextBox();
             this.textBoxActorsCounter_EIH = new System.Windows.Forms.TextBox();
@@ -48,11 +48,11 @@
             this.labelMinTime_EIH = new System.Windows.Forms.Label();
             this.groupBoxStatistics_EIH = new System.Windows.Forms.GroupBox();
             this.labelStats_EIH = new System.Windows.Forms.Label();
-            this.buttonShowStats_EIH = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonShowStats_EIH = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxOutPutData_EIH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
@@ -82,20 +82,6 @@
             this.buttonInfo_EIH.UseVisualStyleBackColor = true;
             this.buttonInfo_EIH.Click += new System.EventHandler(this.buttonInfo_EIH_Click);
             // 
-            // openFileDialog_EIH
-            // 
-            this.openFileDialog_EIH.FileName = "openFileDialog1";
-            // 
-            // groupBoxOutPutData_EIH
-            // 
-            this.groupBoxOutPutData_EIH.Controls.Add(this.dataGridView1);
-            this.groupBoxOutPutData_EIH.Location = new System.Drawing.Point(13, 111);
-            this.groupBoxOutPutData_EIH.Name = "groupBoxOutPutData_EIH";
-            this.groupBoxOutPutData_EIH.Size = new System.Drawing.Size(470, 444);
-            this.groupBoxOutPutData_EIH.TabIndex = 1;
-            this.groupBoxOutPutData_EIH.TabStop = false;
-            this.groupBoxOutPutData_EIH.Text = "Вывод данных:";
-            // 
             // buttonSaveFile_EIH
             // 
             this.buttonSaveFile_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -117,6 +103,21 @@
             this.buttonAddVideo_EIH.TabIndex = 0;
             this.toolTip_EIH.SetToolTip(this.buttonAddVideo_EIH, "Позволяет добавить информацию о новом видео\r\n");
             this.buttonAddVideo_EIH.UseVisualStyleBackColor = true;
+            this.buttonAddVideo_EIH.Click += new System.EventHandler(this.buttonAddVideo_EIH_Click);
+            // 
+            // openFileDialog_EIH
+            // 
+            this.openFileDialog_EIH.FileName = "openFileDialog1";
+            // 
+            // groupBoxOutPutData_EIH
+            // 
+            this.groupBoxOutPutData_EIH.Controls.Add(this.dataGridView1);
+            this.groupBoxOutPutData_EIH.Location = new System.Drawing.Point(13, 111);
+            this.groupBoxOutPutData_EIH.Name = "groupBoxOutPutData_EIH";
+            this.groupBoxOutPutData_EIH.Size = new System.Drawing.Size(470, 444);
+            this.groupBoxOutPutData_EIH.TabIndex = 1;
+            this.groupBoxOutPutData_EIH.TabStop = false;
+            this.groupBoxOutPutData_EIH.Text = "Вывод данных:";
             // 
             // dataGridView1
             // 
@@ -249,47 +250,6 @@
             this.labelStats_EIH.TabIndex = 2;
             this.labelStats_EIH.Text = "Узнать статистику:";
             // 
-            // buttonShowStats_EIH
-            // 
-            this.buttonShowStats_EIH.BackColor = System.Drawing.SystemColors.Info;
-            this.buttonShowStats_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonShowStats_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowStats_EIH.Image")));
-            this.buttonShowStats_EIH.Location = new System.Drawing.Point(159, 18);
-            this.buttonShowStats_EIH.Name = "buttonShowStats_EIH";
-            this.buttonShowStats_EIH.Size = new System.Drawing.Size(40, 40);
-            this.buttonShowStats_EIH.TabIndex = 0;
-            this.buttonShowStats_EIH.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(246, 68);
-            this.label1.MaximumSize = new System.Drawing.Size(120, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Самое дорогое видео:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(274, 192);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(52, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(274, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(52, 22);
-            this.textBox2.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -302,6 +262,47 @@
             this.label2.Size = new System.Drawing.Size(120, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "Самое дешевое видео:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(274, 105);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(52, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // buttonShowStats_EIH
+            // 
+            this.buttonShowStats_EIH.BackColor = System.Drawing.SystemColors.Info;
+            this.buttonShowStats_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShowStats_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowStats_EIH.Image")));
+            this.buttonShowStats_EIH.Location = new System.Drawing.Point(159, 18);
+            this.buttonShowStats_EIH.Name = "buttonShowStats_EIH";
+            this.buttonShowStats_EIH.Size = new System.Drawing.Size(40, 40);
+            this.buttonShowStats_EIH.TabIndex = 0;
+            this.buttonShowStats_EIH.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(274, 192);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(52, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(246, 68);
+            this.label1.MaximumSize = new System.Drawing.Size(120, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 34);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Самое дорогое видео:";
             // 
             // FormMain
             // 

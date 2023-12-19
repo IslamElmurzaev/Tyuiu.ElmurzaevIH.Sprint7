@@ -22,5 +22,11 @@ namespace Project.V9
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
         }
+
+        private void buttonAddVideo_EIH_Click(object sender, EventArgs e)
+        {
+            FormAdd formAdd = new FormAdd();
+            formAdd.ShowDialog();
+        }
     }
 }
