@@ -37,7 +37,7 @@
             this.buttonAddVideo_EIH = new System.Windows.Forms.Button();
             this.openFileDialog_EIH = new System.Windows.Forms.OpenFileDialog();
             this.groupBoxOutPutData_EIH = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewVideos_EIH = new System.Windows.Forms.DataGridView();
             this.textBoxVideoCounter_EIH = new System.Windows.Forms.TextBox();
             this.textBoxActorsCounter_EIH = new System.Windows.Forms.TextBox();
             this.textBoxMaxTimeCounter_EIH = new System.Windows.Forms.TextBox();
@@ -53,8 +53,9 @@
             this.buttonShowStats_EIH = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBoxOutPutData_EIH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.buttonOpenFile_EIH.TabIndex = 0;
             this.toolTip_EIH.SetToolTip(this.buttonOpenFile_EIH, "Позволяет открыть файл и считать из него данные");
             this.buttonOpenFile_EIH.UseVisualStyleBackColor = true;
+            this.buttonOpenFile_EIH.Click += new System.EventHandler(this.buttonOpenFile_EIH_Click);
             // 
             // buttonInfo_EIH
             // 
@@ -111,7 +113,7 @@
             // 
             // groupBoxOutPutData_EIH
             // 
-            this.groupBoxOutPutData_EIH.Controls.Add(this.dataGridView1);
+            this.groupBoxOutPutData_EIH.Controls.Add(this.dataGridViewVideos_EIH);
             this.groupBoxOutPutData_EIH.Location = new System.Drawing.Point(13, 111);
             this.groupBoxOutPutData_EIH.Name = "groupBoxOutPutData_EIH";
             this.groupBoxOutPutData_EIH.Size = new System.Drawing.Size(470, 444);
@@ -119,16 +121,17 @@
             this.groupBoxOutPutData_EIH.TabStop = false;
             this.groupBoxOutPutData_EIH.Text = "Вывод данных:";
             // 
-            // dataGridView1
+            // dataGridViewVideos_EIH
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(455, 416);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewVideos_EIH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVideos_EIH.Location = new System.Drawing.Point(7, 21);
+            this.dataGridViewVideos_EIH.Name = "dataGridViewVideos_EIH";
+            this.dataGridViewVideos_EIH.ReadOnly = true;
+            this.dataGridViewVideos_EIH.RowHeadersVisible = false;
+            this.dataGridViewVideos_EIH.RowHeadersWidth = 51;
+            this.dataGridViewVideos_EIH.RowTemplate.Height = 24;
+            this.dataGridViewVideos_EIH.Size = new System.Drawing.Size(455, 416);
+            this.dataGridViewVideos_EIH.TabIndex = 0;
             // 
             // textBoxVideoCounter_EIH
             // 
@@ -304,6 +307,10 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Самое дорогое видео:";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,7 +327,7 @@
             this.Name = "FormMain";
             this.Text = "Каталог видео";
             this.groupBoxOutPutData_EIH.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).EndInit();
             this.groupBoxStatistics_EIH.ResumeLayout(false);
             this.groupBoxStatistics_EIH.PerformLayout();
             this.ResumeLayout(false);
@@ -336,7 +343,7 @@
         private System.Windows.Forms.GroupBox groupBoxOutPutData_EIH;
         private System.Windows.Forms.Button buttonSaveFile_EIH;
         private System.Windows.Forms.Button buttonAddVideo_EIH;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewVideos_EIH;
         private System.Windows.Forms.Label labelVideoNum_EIH;
         private System.Windows.Forms.TextBox textBoxMinTimeCounter_EIH;
         private System.Windows.Forms.TextBox textBoxMaxTimeCounter_EIH;
@@ -352,6 +359,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 

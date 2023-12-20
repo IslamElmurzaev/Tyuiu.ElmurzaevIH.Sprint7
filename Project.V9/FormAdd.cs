@@ -16,5 +16,10 @@ namespace Project.V9
         {
             InitializeComponent();
         }
+
+        private void buttonConfirm_EIH_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
