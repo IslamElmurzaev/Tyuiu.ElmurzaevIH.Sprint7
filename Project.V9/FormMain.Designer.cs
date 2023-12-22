@@ -54,6 +54,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.textBoxSearch_EIH = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBoxOutPutData_EIH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
@@ -123,6 +125,7 @@
             // 
             // dataGridViewVideos_EIH
             // 
+            this.dataGridViewVideos_EIH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewVideos_EIH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVideos_EIH.Location = new System.Drawing.Point(7, 21);
             this.dataGridViewVideos_EIH.Name = "dataGridViewVideos_EIH";
@@ -311,12 +314,36 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // textBoxSearch_EIH
+            // 
+            this.textBoxSearch_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch_EIH.Location = new System.Drawing.Point(313, 40);
+            this.textBoxSearch_EIH.Multiline = true;
+            this.textBoxSearch_EIH.Name = "textBoxSearch_EIH";
+            this.textBoxSearch_EIH.Size = new System.Drawing.Size(322, 46);
+            this.textBoxSearch_EIH.TabIndex = 4;
+            this.textBoxSearch_EIH.TextChanged += new System.EventHandler(this.textBoxSearch_EIH_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LimeGreen;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(313, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Поиск:";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(891, 564);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxSearch_EIH);
             this.Controls.Add(this.groupBoxStatistics_EIH);
             this.Controls.Add(this.groupBoxOutPutData_EIH);
             this.Controls.Add(this.buttonInfo_EIH);
@@ -331,6 +358,7 @@
             this.groupBoxStatistics_EIH.ResumeLayout(false);
             this.groupBoxStatistics_EIH.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -360,6 +388,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.TextBox textBoxSearch_EIH;
+        private System.Windows.Forms.Label label3;
     }
 }
 

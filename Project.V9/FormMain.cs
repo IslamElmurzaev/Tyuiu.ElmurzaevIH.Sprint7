@@ -47,39 +47,15 @@ namespace Project.V9
 
                 // Добавить колонки в DataGridView
                 if (data.Count > 0)
-                {
-                    for (int i = 0; i < data[0].Length; i++)
-                    {
-                        if (i == 0)
-                        {
-                            dataGridViewVideos_EIH.Columns.Add("Код видеоленты", "Код видеоленты");
-                        }
-                        else if (i == 1)
-                        {
-                            dataGridViewVideos_EIH.Columns.Add("Дата", "Дата");
-                        }
-                        else if (i == 2)
-                        {
-                        dataGridViewVideos_EIH.Columns.Add("Длительность", "Длительность, сек.");
-                        }
-                        else if (i == 3)
-                        {
-                        dataGridViewVideos_EIH.Columns.Add("Тема", "Тема");
-                        }
-                        else if (i == 4)
-                        {
-                        dataGridViewVideos_EIH.Columns.Add("Цена", "Цена, руб.");
-                        }
-                        else if (i == 5)
-                        {
-                        dataGridViewVideos_EIH.Columns.Add("ФИО актера", "ФИО актера");
-                        }
-                        else if (i == 6)
-                        {
-                        dataGridViewVideos_EIH.Columns.Add("Амплуа актера", "Амплуа актера");
-                        }
-                    }
-
+                {       
+                    dataGridViewVideos_EIH.Columns.Add("Код видеоленты", "Код видеоленты");
+                    dataGridViewVideos_EIH.Columns.Add("Дата", "Дата");
+                    dataGridViewVideos_EIH.Columns.Add("Длительность, сек.", "Длительность, сек.");
+                    dataGridViewVideos_EIH.Columns.Add("Тема", "Тема");
+                    dataGridViewVideos_EIH.Columns.Add("Цена, руб.", "Цена, руб.");
+                    dataGridViewVideos_EIH.Columns.Add("ФИО актера", "ФИО актера");                        
+                    dataGridViewVideos_EIH.Columns.Add("Амплуа актера", "Амплуа актера");
+ 
                     // Добавить строки в DataGridView
                     foreach (var row in data)
                     {
@@ -91,6 +67,10 @@ namespace Project.V9
                     MessageBox.Show("Файл CSV не содержит данных.", "Пустой файл");
                 }
             }
+
+            ConvertStringColToInt("Длительность, сек.");
+            ConvertStringColToInt("Цена, руб.");
+
         }
 
         private List<string[]> ReadCSV(string filePath)
@@ -116,6 +96,53 @@ namespace Project.V9
             }
 
             return data;
+        }
+
+        private void textBoxSearch_EIH_TextChanged(object sender, EventArgs e)
+        {
+            string searchKeyword = textBoxSearch_EIH.Text.ToLower();
+            if (searchKeyword.Length == 0 )
+            {
+                return;
+            }
+            
+            foreach (DataGridViewRow row in dataGridViewVideos_EIH.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    bool rowVisible = false;
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchKeyword.ToLower()))
+                        {
+                            rowVisible = true;
+                            break;
+                        }
+                    }
+                    row.Visible = rowVisible;
+                }
+            }
+        }
+
+        private void ConvertStringColToInt(string colName)
+        {
+            foreach (DataGridViewRow row in dataGridViewVideos_EIH.Rows)
+            {
+                object cellValue = row.Cells[colName].Value;
+
+                if (cellValue != null)
+                {
+                    string stringValue = cellValue.ToString();
+                    if (int.TryParse(stringValue, out int intValue))
+                    {
+                        row.Cells[colName].Value = intValue;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Ошибка преобразования в строке {row.Index + 1}");
+                    }
+                }
+            }
         }
     }
 }
