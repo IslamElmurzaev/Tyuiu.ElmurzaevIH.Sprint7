@@ -40,8 +40,8 @@
             this.dataGridViewVideos_EIH = new System.Windows.Forms.DataGridView();
             this.textBoxVideoCounter_EIH = new System.Windows.Forms.TextBox();
             this.textBoxActorsCounter_EIH = new System.Windows.Forms.TextBox();
-            this.textBoxMaxTimeCounter_EIH = new System.Windows.Forms.TextBox();
             this.textBoxMinTimeCounter_EIH = new System.Windows.Forms.TextBox();
+            this.textBoxMaxTimeCounter_EIH = new System.Windows.Forms.TextBox();
             this.labelVideoNum_EIH = new System.Windows.Forms.Label();
             this.labelActorsCounter_EIH = new System.Windows.Forms.Label();
             this.labelMaxTime_EIH = new System.Windows.Forms.Label();
@@ -49,13 +49,14 @@
             this.groupBoxStatistics_EIH = new System.Windows.Forms.GroupBox();
             this.labelStats_EIH = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxMaxPrice_EIH = new System.Windows.Forms.TextBox();
             this.buttonShowStats_EIH = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMinPrice_EIH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.textBoxSearch_EIH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.saveFileDialog_EIH = new System.Windows.Forms.SaveFileDialog();
             this.groupBoxOutPutData_EIH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
@@ -96,6 +97,7 @@
             this.buttonSaveFile_EIH.TabIndex = 0;
             this.toolTip_EIH.SetToolTip(this.buttonSaveFile_EIH, "Позволяет сохранить файл");
             this.buttonSaveFile_EIH.UseVisualStyleBackColor = true;
+            this.buttonSaveFile_EIH.Click += new System.EventHandler(this.buttonSaveFile_EIH_Click);
             // 
             // buttonAddVideo_EIH
             // 
@@ -154,23 +156,23 @@
             this.textBoxActorsCounter_EIH.Size = new System.Drawing.Size(52, 22);
             this.textBoxActorsCounter_EIH.TabIndex = 1;
             // 
-            // textBoxMaxTimeCounter_EIH
-            // 
-            this.textBoxMaxTimeCounter_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMaxTimeCounter_EIH.Location = new System.Drawing.Point(142, 192);
-            this.textBoxMaxTimeCounter_EIH.Name = "textBoxMaxTimeCounter_EIH";
-            this.textBoxMaxTimeCounter_EIH.ReadOnly = true;
-            this.textBoxMaxTimeCounter_EIH.Size = new System.Drawing.Size(52, 22);
-            this.textBoxMaxTimeCounter_EIH.TabIndex = 1;
-            // 
             // textBoxMinTimeCounter_EIH
             // 
             this.textBoxMinTimeCounter_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMinTimeCounter_EIH.Location = new System.Drawing.Point(142, 105);
+            this.textBoxMinTimeCounter_EIH.Location = new System.Drawing.Point(142, 192);
             this.textBoxMinTimeCounter_EIH.Name = "textBoxMinTimeCounter_EIH";
             this.textBoxMinTimeCounter_EIH.ReadOnly = true;
             this.textBoxMinTimeCounter_EIH.Size = new System.Drawing.Size(52, 22);
             this.textBoxMinTimeCounter_EIH.TabIndex = 1;
+            // 
+            // textBoxMaxTimeCounter_EIH
+            // 
+            this.textBoxMaxTimeCounter_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMaxTimeCounter_EIH.Location = new System.Drawing.Point(142, 105);
+            this.textBoxMaxTimeCounter_EIH.Name = "textBoxMaxTimeCounter_EIH";
+            this.textBoxMaxTimeCounter_EIH.ReadOnly = true;
+            this.textBoxMaxTimeCounter_EIH.Size = new System.Drawing.Size(52, 22);
+            this.textBoxMaxTimeCounter_EIH.TabIndex = 1;
             // 
             // labelVideoNum_EIH
             // 
@@ -228,13 +230,13 @@
             this.groupBoxStatistics_EIH.Controls.Add(this.label2);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelMinTime_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxVideoCounter_EIH);
-            this.groupBoxStatistics_EIH.Controls.Add(this.textBox2);
+            this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMaxPrice_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxActorsCounter_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.buttonShowStats_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelMaxTime_EIH);
-            this.groupBoxStatistics_EIH.Controls.Add(this.textBox1);
-            this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMaxTimeCounter_EIH);
+            this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMinPrice_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMinTimeCounter_EIH);
+            this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMaxTimeCounter_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.label1);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelActorsCounter_EIH);
             this.groupBoxStatistics_EIH.Location = new System.Drawing.Point(489, 111);
@@ -269,14 +271,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Самое дешевое видео:";
             // 
-            // textBox2
+            // textBoxMaxPrice_EIH
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(274, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(52, 22);
-            this.textBox2.TabIndex = 1;
+            this.textBoxMaxPrice_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMaxPrice_EIH.Location = new System.Drawing.Point(274, 105);
+            this.textBoxMaxPrice_EIH.Name = "textBoxMaxPrice_EIH";
+            this.textBoxMaxPrice_EIH.ReadOnly = true;
+            this.textBoxMaxPrice_EIH.Size = new System.Drawing.Size(52, 22);
+            this.textBoxMaxPrice_EIH.TabIndex = 1;
             // 
             // buttonShowStats_EIH
             // 
@@ -288,15 +290,16 @@
             this.buttonShowStats_EIH.Size = new System.Drawing.Size(40, 40);
             this.buttonShowStats_EIH.TabIndex = 0;
             this.buttonShowStats_EIH.UseVisualStyleBackColor = false;
+            this.buttonShowStats_EIH.Click += new System.EventHandler(this.buttonShowStats_EIH_Click);
             // 
-            // textBox1
+            // textBoxMinPrice_EIH
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(274, 192);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(52, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxMinPrice_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMinPrice_EIH.Location = new System.Drawing.Point(274, 192);
+            this.textBoxMinPrice_EIH.Name = "textBoxMinPrice_EIH";
+            this.textBoxMinPrice_EIH.ReadOnly = true;
+            this.textBoxMinPrice_EIH.Size = new System.Drawing.Size(52, 22);
+            this.textBoxMinPrice_EIH.TabIndex = 1;
             // 
             // label1
             // 
@@ -373,8 +376,8 @@
         private System.Windows.Forms.Button buttonAddVideo_EIH;
         private System.Windows.Forms.DataGridView dataGridViewVideos_EIH;
         private System.Windows.Forms.Label labelVideoNum_EIH;
-        private System.Windows.Forms.TextBox textBoxMinTimeCounter_EIH;
         private System.Windows.Forms.TextBox textBoxMaxTimeCounter_EIH;
+        private System.Windows.Forms.TextBox textBoxMinTimeCounter_EIH;
         private System.Windows.Forms.TextBox textBoxActorsCounter_EIH;
         private System.Windows.Forms.TextBox textBoxVideoCounter_EIH;
         private System.Windows.Forms.Label labelMinTime_EIH;
@@ -384,12 +387,13 @@
         private System.Windows.Forms.Label labelStats_EIH;
         private System.Windows.Forms.Button buttonShowStats_EIH;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMaxPrice_EIH;
+        private System.Windows.Forms.TextBox textBoxMinPrice_EIH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TextBox textBoxSearch_EIH;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_EIH;
     }
 }
 

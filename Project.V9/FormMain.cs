@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Project.V9.Lib;
+
 namespace Project.V9
 {
     public partial class FormMain : Form
@@ -16,6 +18,9 @@ namespace Project.V9
         {
             InitializeComponent();
         }
+
+        string filePath;
+        DataService ds = new DataService();
 
         private void buttonInfo_EIH_Click(object sender, EventArgs e)
         {
@@ -38,7 +43,7 @@ namespace Project.V9
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Чтение данных из CSV файла
-                string filePath = openFileDialog.FileName;
+                filePath = openFileDialog.FileName;
                 List<string[]> data = ReadCSV(filePath);
 
                 // Очистить DataGridView перед загрузкой новых данных
@@ -143,6 +148,67 @@ namespace Project.V9
                     }
                 }
             }
+        }
+
+        private void buttonShowStats_EIH_Click(object sender, EventArgs e)
+        {
+            textBoxMaxTimeCounter_EIH.Text = Convert.ToString(ds.GetMaxVideoDuration(filePath));
+            textBoxMinTimeCounter_EIH.Text = Convert.ToString(ds.GetMinVideoDuration(filePath));
+
+            textBoxMaxPrice_EIH.Text = Convert.ToString(ds.GetMaxVideoPrice(filePath));
+            textBoxMinPrice_EIH.Text = Convert.ToString(ds.GetMinVideoPrice(filePath));
+
+            textBoxVideoCounter_EIH.Text = Convert.ToString(ds.GetVideoCount(filePath));
+            textBoxActorsCounter_EIH.Text = Convert.ToString(ds.GetUniqueActorCount(filePath));
+        }
+
+        private void buttonSaveFile_EIH_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewVideos_EIH.Rows.Count == 0)
+            {
+                MessageBox.Show("Нет данных для сохранения.");
+                return;
+            }
+
+            if (saveFileDialog_EIH.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog_EIH.FileName;
+
+                try
+                {
+                    // Создаем StreamWriter для записи в файл
+                    using (StreamWriter writer = new StreamWriter(filePath, false, Encoding.UTF8))
+                    {
+                        // Записываем заголовки столбцов
+                        for (int i = 0; i < dataGridViewVideos_EIH.Columns.Count; i++)
+                        {
+                            writer.Write(dataGridViewVideos_EIH.Columns[i].HeaderText);
+                            if (i < dataGridViewVideos_EIH.Columns.Count - 1)
+                                writer.Write(";");
+                        }
+                        writer.WriteLine();
+
+                        // Записываем данные
+                        foreach (DataGridViewRow row in dataGridViewVideos_EIH.Rows)
+                        {
+                            for (int i = 0; i < dataGridViewVideos_EIH.Columns.Count; i++)
+                            {
+                                writer.Write(row.Cells[i].Value);
+                                if (i < dataGridViewVideos_EIH.Columns.Count - 1)
+                                    writer.Write(";");
+                            }
+                            writer.WriteLine();
+                        }
+                    }
+
+                    MessageBox.Show("Данные успешно сохранены в CSV файл.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Произошла ошибка при сохранении файла: {ex.Message}");
+                }
+            }
+
         }
     }
 }
