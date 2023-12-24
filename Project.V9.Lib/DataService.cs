@@ -22,7 +22,7 @@ namespace Project.V9.Lib
 
             // Находим максимальную длительность (предполагаем, что длительность в третьем столбце)
             int maxDuration = 0;
-            for (int i = 0; i < dataArray.Length; i++) // начинаем с 1, чтобы пропустить заголовок
+            for (int i = 0; i < dataArray.Length; i++) // начинаем с 0
             {
                 if (dataArray[i].Length > 2 && int.TryParse(dataArray[i][2], out int duration))
                 {

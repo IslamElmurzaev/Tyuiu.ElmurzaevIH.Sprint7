@@ -57,6 +57,7 @@
             this.textBoxSearch_EIH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.saveFileDialog_EIH = new System.Windows.Forms.SaveFileDialog();
+            this.buttonGuide_EIH = new System.Windows.Forms.Button();
             this.groupBoxOutPutData_EIH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
@@ -70,7 +71,7 @@
             this.buttonOpenFile_EIH.Name = "buttonOpenFile_EIH";
             this.buttonOpenFile_EIH.Size = new System.Drawing.Size(75, 75);
             this.buttonOpenFile_EIH.TabIndex = 0;
-            this.toolTip_EIH.SetToolTip(this.buttonOpenFile_EIH, "Позволяет открыть файл и считать из него данные");
+            this.toolTip_EIH.SetToolTip(this.buttonOpenFile_EIH, "Открыть файл и считать из него данные");
             this.buttonOpenFile_EIH.UseVisualStyleBackColor = true;
             this.buttonOpenFile_EIH.Click += new System.EventHandler(this.buttonOpenFile_EIH_Click);
             // 
@@ -95,7 +96,7 @@
             this.buttonSaveFile_EIH.Name = "buttonSaveFile_EIH";
             this.buttonSaveFile_EIH.Size = new System.Drawing.Size(75, 75);
             this.buttonSaveFile_EIH.TabIndex = 0;
-            this.toolTip_EIH.SetToolTip(this.buttonSaveFile_EIH, "Позволяет сохранить файл");
+            this.toolTip_EIH.SetToolTip(this.buttonSaveFile_EIH, "Сохранить файл");
             this.buttonSaveFile_EIH.UseVisualStyleBackColor = true;
             this.buttonSaveFile_EIH.Click += new System.EventHandler(this.buttonSaveFile_EIH_Click);
             // 
@@ -107,7 +108,7 @@
             this.buttonAddVideo_EIH.Name = "buttonAddVideo_EIH";
             this.buttonAddVideo_EIH.Size = new System.Drawing.Size(75, 75);
             this.buttonAddVideo_EIH.TabIndex = 0;
-            this.toolTip_EIH.SetToolTip(this.buttonAddVideo_EIH, "Позволяет добавить информацию о новом видео\r\n");
+            this.toolTip_EIH.SetToolTip(this.buttonAddVideo_EIH, "Добавить информацию о новом видео\r\n");
             this.buttonAddVideo_EIH.UseVisualStyleBackColor = true;
             this.buttonAddVideo_EIH.Click += new System.EventHandler(this.buttonAddVideo_EIH_Click);
             // 
@@ -131,7 +132,6 @@
             this.dataGridViewVideos_EIH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewVideos_EIH.Location = new System.Drawing.Point(7, 21);
             this.dataGridViewVideos_EIH.Name = "dataGridViewVideos_EIH";
-            this.dataGridViewVideos_EIH.ReadOnly = true;
             this.dataGridViewVideos_EIH.RowHeadersVisible = false;
             this.dataGridViewVideos_EIH.RowHeadersWidth = 51;
             this.dataGridViewVideos_EIH.RowTemplate.Height = 24;
@@ -339,12 +339,26 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Поиск:";
             // 
+            // buttonGuide_EIH
+            // 
+            this.buttonGuide_EIH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGuide_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuide_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuide_EIH.Image")));
+            this.buttonGuide_EIH.Location = new System.Drawing.Point(723, 13);
+            this.buttonGuide_EIH.Name = "buttonGuide_EIH";
+            this.buttonGuide_EIH.Size = new System.Drawing.Size(75, 75);
+            this.buttonGuide_EIH.TabIndex = 6;
+            this.toolTip_EIH.SetToolTip(this.buttonGuide_EIH, "Руководство к пользованию");
+            this.buttonGuide_EIH.UseVisualStyleBackColor = true;
+            this.buttonGuide_EIH.Click += new System.EventHandler(this.buttonGuide_EIH_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(891, 564);
+            this.Controls.Add(this.buttonGuide_EIH);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxSearch_EIH);
             this.Controls.Add(this.groupBoxStatistics_EIH);
@@ -394,6 +408,7 @@
         private System.Windows.Forms.TextBox textBoxSearch_EIH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_EIH;
+        private System.Windows.Forms.Button buttonGuide_EIH;
     }
 }
 

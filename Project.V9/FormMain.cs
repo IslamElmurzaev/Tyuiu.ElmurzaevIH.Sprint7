@@ -173,31 +173,29 @@ namespace Project.V9
             if (saveFileDialog_EIH.ShowDialog() == DialogResult.OK)
             {
                 string filePath = saveFileDialog_EIH.FileName;
+                if (!filePath.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
+                {
+                    filePath += ".csv";
+                }
 
                 try
                 {
                     // Создаем StreamWriter для записи в файл
                     using (StreamWriter writer = new StreamWriter(filePath, false, Encoding.UTF8))
                     {
-                        // Записываем заголовки столбцов
-                        for (int i = 0; i < dataGridViewVideos_EIH.Columns.Count; i++)
-                        {
-                            writer.Write(dataGridViewVideos_EIH.Columns[i].HeaderText);
-                            if (i < dataGridViewVideos_EIH.Columns.Count - 1)
-                                writer.Write(";");
-                        }
-                        writer.WriteLine();
-
                         // Записываем данные
                         foreach (DataGridViewRow row in dataGridViewVideos_EIH.Rows)
                         {
-                            for (int i = 0; i < dataGridViewVideos_EIH.Columns.Count; i++)
+                            if (!row.IsNewRow)
                             {
-                                writer.Write(row.Cells[i].Value);
-                                if (i < dataGridViewVideos_EIH.Columns.Count - 1)
-                                    writer.Write(";");
+                                for (int i = 0; i < dataGridViewVideos_EIH.Columns.Count; i++)
+                                {
+                                    writer.Write(row.Cells[i].Value);
+                                    if (i < dataGridViewVideos_EIH.Columns.Count - 1)
+                                        writer.Write(";");
+                                }
+                                writer.WriteLine();
                             }
-                            writer.WriteLine();
                         }
                     }
 
@@ -209,6 +207,12 @@ namespace Project.V9
                 }
             }
 
+        }
+
+        private void buttonGuide_EIH_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.ShowDialog();
         }
     }
 }
