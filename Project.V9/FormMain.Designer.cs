@@ -48,14 +48,14 @@
             this.labelMinTime_EIH = new System.Windows.Forms.Label();
             this.groupBoxStatistics_EIH = new System.Windows.Forms.GroupBox();
             this.labelStats_EIH = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelMinPrice_EIH = new System.Windows.Forms.Label();
             this.textBoxMaxPrice_EIH = new System.Windows.Forms.TextBox();
             this.buttonShowStats_EIH = new System.Windows.Forms.Button();
             this.textBoxMinPrice_EIH = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelMaxPrice_EIH = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.textBoxSearch_EIH = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelSearch_EIH = new System.Windows.Forms.Label();
             this.saveFileDialog_EIH = new System.Windows.Forms.SaveFileDialog();
             this.buttonGuide_EIH = new System.Windows.Forms.Button();
             this.groupBoxOutPutData_EIH.SuspendLayout();
@@ -227,7 +227,7 @@
             // 
             this.groupBoxStatistics_EIH.Controls.Add(this.labelStats_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelVideoNum_EIH);
-            this.groupBoxStatistics_EIH.Controls.Add(this.label2);
+            this.groupBoxStatistics_EIH.Controls.Add(this.labelMinPrice_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelMinTime_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxVideoCounter_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMaxPrice_EIH);
@@ -237,7 +237,7 @@
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMinPrice_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMinTimeCounter_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.textBoxMaxTimeCounter_EIH);
-            this.groupBoxStatistics_EIH.Controls.Add(this.label1);
+            this.groupBoxStatistics_EIH.Controls.Add(this.labelMaxPrice_EIH);
             this.groupBoxStatistics_EIH.Controls.Add(this.labelActorsCounter_EIH);
             this.groupBoxStatistics_EIH.Location = new System.Drawing.Point(489, 111);
             this.groupBoxStatistics_EIH.Name = "groupBoxStatistics_EIH";
@@ -258,18 +258,18 @@
             this.labelStats_EIH.TabIndex = 2;
             this.labelStats_EIH.Text = "Узнать статистику:";
             // 
-            // label2
+            // labelMinPrice_EIH
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(246, 155);
-            this.label2.MaximumSize = new System.Drawing.Size(130, 100);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.label2.Size = new System.Drawing.Size(120, 34);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Самое дешевое видео:";
+            this.labelMinPrice_EIH.AutoSize = true;
+            this.labelMinPrice_EIH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelMinPrice_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMinPrice_EIH.Location = new System.Drawing.Point(246, 155);
+            this.labelMinPrice_EIH.MaximumSize = new System.Drawing.Size(130, 100);
+            this.labelMinPrice_EIH.Name = "labelMinPrice_EIH";
+            this.labelMinPrice_EIH.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.labelMinPrice_EIH.Size = new System.Drawing.Size(120, 34);
+            this.labelMinPrice_EIH.TabIndex = 2;
+            this.labelMinPrice_EIH.Text = "Самое дешевое видео:";
             // 
             // textBoxMaxPrice_EIH
             // 
@@ -301,17 +301,17 @@
             this.textBoxMinPrice_EIH.Size = new System.Drawing.Size(52, 22);
             this.textBoxMinPrice_EIH.TabIndex = 1;
             // 
-            // label1
+            // labelMaxPrice_EIH
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(246, 68);
-            this.label1.MaximumSize = new System.Drawing.Size(120, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Самое дорогое видео:";
+            this.labelMaxPrice_EIH.AutoSize = true;
+            this.labelMaxPrice_EIH.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelMaxPrice_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMaxPrice_EIH.Location = new System.Drawing.Point(246, 68);
+            this.labelMaxPrice_EIH.MaximumSize = new System.Drawing.Size(120, 100);
+            this.labelMaxPrice_EIH.Name = "labelMaxPrice_EIH";
+            this.labelMaxPrice_EIH.Size = new System.Drawing.Size(111, 34);
+            this.labelMaxPrice_EIH.TabIndex = 2;
+            this.labelMaxPrice_EIH.Text = "Самое дорогое видео:";
             // 
             // openFileDialog
             // 
@@ -327,17 +327,17 @@
             this.textBoxSearch_EIH.TabIndex = 4;
             this.textBoxSearch_EIH.TextChanged += new System.EventHandler(this.textBoxSearch_EIH_TextChanged);
             // 
-            // label3
+            // labelSearch_EIH
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LimeGreen;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(313, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Поиск:";
+            this.labelSearch_EIH.AutoSize = true;
+            this.labelSearch_EIH.BackColor = System.Drawing.Color.LimeGreen;
+            this.labelSearch_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelSearch_EIH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSearch_EIH.Location = new System.Drawing.Point(313, 18);
+            this.labelSearch_EIH.Name = "labelSearch_EIH";
+            this.labelSearch_EIH.Size = new System.Drawing.Size(65, 20);
+            this.labelSearch_EIH.TabIndex = 5;
+            this.labelSearch_EIH.Text = "Поиск:";
             // 
             // buttonGuide_EIH
             // 
@@ -359,7 +359,7 @@
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(891, 564);
             this.Controls.Add(this.buttonGuide_EIH);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelSearch_EIH);
             this.Controls.Add(this.textBoxSearch_EIH);
             this.Controls.Add(this.groupBoxStatistics_EIH);
             this.Controls.Add(this.groupBoxOutPutData_EIH);
@@ -400,13 +400,13 @@
         private System.Windows.Forms.GroupBox groupBoxStatistics_EIH;
         private System.Windows.Forms.Label labelStats_EIH;
         private System.Windows.Forms.Button buttonShowStats_EIH;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelMinPrice_EIH;
         private System.Windows.Forms.TextBox textBoxMaxPrice_EIH;
         private System.Windows.Forms.TextBox textBoxMinPrice_EIH;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMaxPrice_EIH;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TextBox textBoxSearch_EIH;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelSearch_EIH;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_EIH;
         private System.Windows.Forms.Button buttonGuide_EIH;
     }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             this.pictureBoxDeveloper_EIH = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxInfo_EIH = new System.Windows.Forms.TextBox();
             this.buttonCloseWindow_EIH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDeveloper_EIH)).BeginInit();
             this.SuspendLayout();
@@ -45,19 +45,19 @@
             this.pictureBoxDeveloper_EIH.TabIndex = 0;
             this.pictureBoxDeveloper_EIH.TabStop = false;
             // 
-            // textBox1
+            // textBoxInfo_EIH
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(243, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(458, 178);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBoxInfo_EIH.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxInfo_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxInfo_EIH.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInfo_EIH.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxInfo_EIH.Location = new System.Drawing.Point(243, 12);
+            this.textBoxInfo_EIH.Multiline = true;
+            this.textBoxInfo_EIH.Name = "textBoxInfo_EIH";
+            this.textBoxInfo_EIH.ReadOnly = true;
+            this.textBoxInfo_EIH.Size = new System.Drawing.Size(458, 178);
+            this.textBoxInfo_EIH.TabIndex = 1;
+            this.textBoxInfo_EIH.Text = resources.GetString("textBoxInfo_EIH.Text");
             // 
             // buttonCloseWindow_EIH
             // 
@@ -79,7 +79,7 @@
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(709, 258);
             this.Controls.Add(this.buttonCloseWindow_EIH);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxInfo_EIH);
             this.Controls.Add(this.pictureBoxDeveloper_EIH);
             this.Name = "FormAbout";
             this.Text = "FormAbout";
@@ -92,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxDeveloper_EIH;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxInfo_EIH;
         private System.Windows.Forms.Button buttonCloseWindow_EIH;
     }
 }
