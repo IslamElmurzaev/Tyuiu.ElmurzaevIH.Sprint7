@@ -34,7 +34,7 @@
             this.buttonInfo_EIH = new System.Windows.Forms.Button();
             this.toolTip_EIH = new System.Windows.Forms.ToolTip(this.components);
             this.buttonSaveFile_EIH = new System.Windows.Forms.Button();
-            this.buttonAddVideo_EIH = new System.Windows.Forms.Button();
+            this.buttonGuide_EIH = new System.Windows.Forms.Button();
             this.openFileDialog_EIH = new System.Windows.Forms.OpenFileDialog();
             this.groupBoxOutPutData_EIH = new System.Windows.Forms.GroupBox();
             this.dataGridViewVideos_EIH = new System.Windows.Forms.DataGridView();
@@ -57,7 +57,6 @@
             this.textBoxSearch_EIH = new System.Windows.Forms.TextBox();
             this.labelSearch_EIH = new System.Windows.Forms.Label();
             this.saveFileDialog_EIH = new System.Windows.Forms.SaveFileDialog();
-            this.buttonGuide_EIH = new System.Windows.Forms.Button();
             this.groupBoxOutPutData_EIH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos_EIH)).BeginInit();
             this.groupBoxStatistics_EIH.SuspendLayout();
@@ -92,7 +91,7 @@
             // 
             this.buttonSaveFile_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveFile_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveFile_EIH.Image")));
-            this.buttonSaveFile_EIH.Location = new System.Drawing.Point(214, 12);
+            this.buttonSaveFile_EIH.Location = new System.Drawing.Point(106, 13);
             this.buttonSaveFile_EIH.Name = "buttonSaveFile_EIH";
             this.buttonSaveFile_EIH.Size = new System.Drawing.Size(75, 75);
             this.buttonSaveFile_EIH.TabIndex = 0;
@@ -100,17 +99,18 @@
             this.buttonSaveFile_EIH.UseVisualStyleBackColor = true;
             this.buttonSaveFile_EIH.Click += new System.EventHandler(this.buttonSaveFile_EIH_Click);
             // 
-            // buttonAddVideo_EIH
+            // buttonGuide_EIH
             // 
-            this.buttonAddVideo_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddVideo_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonAddVideo_EIH.Image")));
-            this.buttonAddVideo_EIH.Location = new System.Drawing.Point(112, 12);
-            this.buttonAddVideo_EIH.Name = "buttonAddVideo_EIH";
-            this.buttonAddVideo_EIH.Size = new System.Drawing.Size(75, 75);
-            this.buttonAddVideo_EIH.TabIndex = 0;
-            this.toolTip_EIH.SetToolTip(this.buttonAddVideo_EIH, "Добавить информацию о новом видео\r\n");
-            this.buttonAddVideo_EIH.UseVisualStyleBackColor = true;
-            this.buttonAddVideo_EIH.Click += new System.EventHandler(this.buttonAddVideo_EIH_Click);
+            this.buttonGuide_EIH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGuide_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuide_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuide_EIH.Image")));
+            this.buttonGuide_EIH.Location = new System.Drawing.Point(723, 13);
+            this.buttonGuide_EIH.Name = "buttonGuide_EIH";
+            this.buttonGuide_EIH.Size = new System.Drawing.Size(75, 75);
+            this.buttonGuide_EIH.TabIndex = 6;
+            this.toolTip_EIH.SetToolTip(this.buttonGuide_EIH, "Руководство к пользованию");
+            this.buttonGuide_EIH.UseVisualStyleBackColor = true;
+            this.buttonGuide_EIH.Click += new System.EventHandler(this.buttonGuide_EIH_Click);
             // 
             // openFileDialog_EIH
             // 
@@ -320,10 +320,10 @@
             // textBoxSearch_EIH
             // 
             this.textBoxSearch_EIH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSearch_EIH.Location = new System.Drawing.Point(313, 40);
+            this.textBoxSearch_EIH.Location = new System.Drawing.Point(210, 42);
             this.textBoxSearch_EIH.Multiline = true;
             this.textBoxSearch_EIH.Name = "textBoxSearch_EIH";
-            this.textBoxSearch_EIH.Size = new System.Drawing.Size(322, 46);
+            this.textBoxSearch_EIH.Size = new System.Drawing.Size(375, 46);
             this.textBoxSearch_EIH.TabIndex = 4;
             this.textBoxSearch_EIH.TextChanged += new System.EventHandler(this.textBoxSearch_EIH_TextChanged);
             // 
@@ -333,24 +333,11 @@
             this.labelSearch_EIH.BackColor = System.Drawing.Color.LimeGreen;
             this.labelSearch_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSearch_EIH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSearch_EIH.Location = new System.Drawing.Point(313, 18);
+            this.labelSearch_EIH.Location = new System.Drawing.Point(210, 20);
             this.labelSearch_EIH.Name = "labelSearch_EIH";
             this.labelSearch_EIH.Size = new System.Drawing.Size(65, 20);
             this.labelSearch_EIH.TabIndex = 5;
             this.labelSearch_EIH.Text = "Поиск:";
-            // 
-            // buttonGuide_EIH
-            // 
-            this.buttonGuide_EIH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGuide_EIH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuide_EIH.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuide_EIH.Image")));
-            this.buttonGuide_EIH.Location = new System.Drawing.Point(723, 13);
-            this.buttonGuide_EIH.Name = "buttonGuide_EIH";
-            this.buttonGuide_EIH.Size = new System.Drawing.Size(75, 75);
-            this.buttonGuide_EIH.TabIndex = 6;
-            this.toolTip_EIH.SetToolTip(this.buttonGuide_EIH, "Руководство к пользованию");
-            this.buttonGuide_EIH.UseVisualStyleBackColor = true;
-            this.buttonGuide_EIH.Click += new System.EventHandler(this.buttonGuide_EIH_Click);
             // 
             // FormMain
             // 
@@ -364,7 +351,6 @@
             this.Controls.Add(this.groupBoxStatistics_EIH);
             this.Controls.Add(this.groupBoxOutPutData_EIH);
             this.Controls.Add(this.buttonInfo_EIH);
-            this.Controls.Add(this.buttonAddVideo_EIH);
             this.Controls.Add(this.buttonSaveFile_EIH);
             this.Controls.Add(this.buttonOpenFile_EIH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -387,7 +373,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog_EIH;
         private System.Windows.Forms.GroupBox groupBoxOutPutData_EIH;
         private System.Windows.Forms.Button buttonSaveFile_EIH;
-        private System.Windows.Forms.Button buttonAddVideo_EIH;
         private System.Windows.Forms.DataGridView dataGridViewVideos_EIH;
         private System.Windows.Forms.Label labelVideoNum_EIH;
         private System.Windows.Forms.TextBox textBoxMaxTimeCounter_EIH;
